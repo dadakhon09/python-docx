@@ -242,5 +242,38 @@ table14.cell(0, 0).text = 'ЭЪЛОН ҚИЛИНСИН:'
 table14.cell(0, 2).text = 'сабаб **** майор ААА ААА ААА (А-) “Қаттиқ ҳайфсан”;'
 table14.cell(2, 2).text = 'Асос:'
 
+resize_table(table14)
+
+blank = document.add_paragraph(' ')
+run_blank = blank.add_run()
+run_blank.add_break()
+
+table15 = document.add_table(rows=5, cols=3)
+table15.cell(0, 0).text = 'ЮБОРИЛСИН:'
+table15.cell(0, 2).text = '**** подполковник ААА ААА ААА (У-), «Кўз микрохирургияси» цикли бўйича малака ошириш учун,' \
+                          ' 2019 йилнинг 04 февраль кунидан 02 март кунига қадар Тошкент врачлар малакасини ошириш институти ихтиёрига;'
+table15.cell(2, 2).text = 'Асос:'
+
+resize_table(table15)
+
+blank = document.add_paragraph(' ')
+run_blank = blank.add_run()
+run_blank.add_break()
+
+table16 = document.add_table(rows=8, cols=3)
+table16.rows[0].cells[0].merge(table16.rows[0].cells[2]).text = '«Ички ишлар органларида хизматни ўташ тартиби тўғрисида»ги ' \
+                                                                'Низом талабларига мувофиқ'
+table16.rows[1].cells[0].merge(table16.rows[1].cells[2]).text = ''
+table16.rows[2].cells[0].merge(table16.rows[2].cells[2]).text = 'ҚУРОЛЛИ  КУЧЛАР  РЕЗЕРВИГА'
+table16.cell(4, 0).text = 'БЎШАТИЛСИН:'
+table16.columns[0].cells[5].merge(table16.columns[0].cells[6]).text = '144-бандининг «а» кичик бандига мувофиқ (пенсия олиш ҳуқуқини берадиган хизмат муддатини ўтамаганлиги)'
+table16.columns[2].cells[4].merge(table16.columns[2].cells[5]).text = '**** сафдор ААА ААА АААА (А-).'
+table16.cell(6, 2).text = 'Асос:'
+resize_table(table16)
+
+blank = document.add_paragraph(' ')
+run_blank = blank.add_run()
+run_blank.add_break()
+
 
 document.save('namuna.docx')
