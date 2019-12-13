@@ -261,12 +261,14 @@ run_blank = blank.add_run()
 run_blank.add_break()
 
 table16 = document.add_table(rows=8, cols=3)
-table16.rows[0].cells[0].merge(table16.rows[0].cells[2]).text = '«Ички ишлар органларида хизматни ўташ тартиби тўғрисида»ги ' \
-                                                                'Низом талабларига мувофиқ'
+table16.rows[0].cells[0].merge(
+    table16.rows[0].cells[2]).text = '«Ички ишлар органларида хизматни ўташ тартиби тўғрисида»ги ' \
+                                     'Низом талабларига мувофиқ'
 table16.rows[1].cells[0].merge(table16.rows[1].cells[2]).text = ''
 table16.rows[2].cells[0].merge(table16.rows[2].cells[2]).text = 'ҚУРОЛЛИ  КУЧЛАР  РЕЗЕРВИГА'
 table16.cell(4, 0).text = 'БЎШАТИЛСИН:'
-table16.columns[0].cells[5].merge(table16.columns[0].cells[6]).text = '144-бандининг «а» кичик бандига мувофиқ (пенсия олиш ҳуқуқини берадиган хизмат муддатини ўтамаганлиги)'
+table16.columns[0].cells[5].merge(table16.columns[0].cells[
+                                      6]).text = '144-бандининг «а» кичик бандига мувофиқ (пенсия олиш ҳуқуқини берадиган хизмат муддатини ўтамаганлиги)'
 table16.columns[2].cells[4].merge(table16.columns[2].cells[5]).text = '**** сафдор ААА ААА АААА (А-).'
 table16.cell(6, 2).text = 'Асос:'
 resize_table(table16)
@@ -275,5 +277,183 @@ blank = document.add_paragraph(' ')
 run_blank = blank.add_run()
 run_blank.add_break()
 
+table17 = document.add_table(rows=2, cols=2)
+table17.cell(0, 0).text = 'ПАСАЙТИРИЛСИН:'
+table17.cell(0, 1).text = 'ЖИЗЗАХ  ВИЛОЯТИ  ИИБ  БЎЙИЧА: \n**** капитан ААА ААА ААА (А-)махсус унвони бир поғона «катта лейтенант»гача.'
+table17.cell(1, 1).text = 'Асос:'
 
+blank = document.add_paragraph(' ')
+run_blank = blank.add_run()
+run_blank.add_break()
+
+p = document.add_paragraph(
+    '4. Ўзбекистон Республикаси Президентининг 2017 йил 29 ноябрдаги ПҚ–3413-сон қарори билан тасдиқланган Ички ишлар органларида хизматни ўташ тартиби тўғрисидаги низомнинг 46-бандига мувофиқ, ')
+
+blank = document.add_paragraph(' ')
+run_blank = blank.add_run()
+run_blank.add_break()
+
+table18 = document.add_table(rows=2, cols=2)
+table18.cell(0, 0).text = 'МАХСУС УНВОНИДАН \nМАҲРУМ ЭТИЛСИН:'
+table18.cell(0, 1).text = 'капитан ААА ААА ААА (А-) '
+table18.cell(1, 1).text = 'Асос:'
+
+blank = document.add_paragraph(' ')
+run_blank = blank.add_run()
+run_blank.add_break()
+
+table19 = document.add_table(rows=9, cols=3)
+table19.rows[0].cells[0].merge(table19.rows[0].cells[
+                                   2]).text = '   «Ички ишлар органларида хизматни ўташ тартиби тўғрисида»ги Низом талабларига мувофиқ'
+table19.rows[1].cells[0].merge(table19.rows[1].cells[2]).text = ''
+table19.rows[2].cells[0].merge(table19.rows[2].cells[2]).text = 'ҚУРОЛЛИ  КУЧЛАР  ЗАХИРАСИГА'
+table19.rows[3].cells[0].merge(table19.rows[3].cells[2]).text = ''
+table19.cell(4, 0).text = 'БЎШАТИЛСИН:'
+table19.cell(4, 2).text = 'ТОШКЕНТ ШАҲАР ИЧКИ ИШЛАР БОШ БОШҚАРМАСИ БЎЙИЧА:'
+table19.cell(6, 0).text = '144-бандининг «д» кичик бандига мувофиқ \n(касаллиги туфайли) '
+table19.cell(6, 2).text = 'полковник ААА ААА ААА (И-), штатларни қайта ташкил этилиши муносабати билан 2019 йилнинг 7 январь кунидан *** озод этилиб, бош бошқарма ихтиёрида бўлган деб ҳисобланиб, буйруқ имзоланган кундан.'
+table19.cell(8, 2).text = 'Асос:'
+resize_table(table19)
+
+blank = document.add_paragraph(' ')
+run_blank = blank.add_run()
+run_blank.add_break()
+
+table20 = document.add_table(rows=4, cols=3)
+table20.rows[0].cells[0].merge(table19.rows[0].cells[2]).text = 'ИСТЕЪФОГА'
+table20.cell(2, 0).text = '144-бандининг «д» кичик бандига мувофиқ \n(касаллиги туфайли)'
+table20.cell(2, 2).text = '****** бошлиғи полковник ААА ААА ААА (П-).'
+table20.cell(3, 2).text = 'Асос:'
+resize_table(table20)
+
+blank = document.add_paragraph(' ')
+run_blank = blank.add_run()
+run_blank.add_break()
+
+table21 = document.add_table(rows=7, cols=3)
+table21.cell(0, 0).text = 'ҲИСОБЛАНСИН:'
+table21.cell(0, 2).text = '*** катта сержант ААА ААА (А-), бола парваришлаш таътили муддати тугашидан олдин 2019 йилнинг 01 февраль кунидан хизмат вазифасини бажаришга киришган деб;'
+table21.cell(2, 2).text = 'Асос:'
+table21.cell(4, 2).text = '*** сафдор ААА ААА ААА (А-), бола парваришлаш таътили муддати тугашидан олдин 2019 йилнинг 28 январь кунидан хизмат вазифасини бажаришга киришган деб;'
+table21.cell(6, 2).text = 'Асос:'
+
+resize_table(table21)
+
+blank = document.add_paragraph(' ')
+run_blank = blank.add_run()
+run_blank.add_break()
+
+table22 = document.add_table(rows=8, cols=3)
+table22.rows[0].cells[0].merge(
+    table22.rows[0].cells[2]).text = '«Ички ишлар органларида хизматни ўташ тартиби тўғрисида»ги ' \
+                                     'Низом талабларига мувофиқ'
+table22.rows[1].cells[0].merge(table22.rows[1].cells[2]).text = ''
+table22.rows[2].cells[0].merge(table22.rows[2].cells[2]).text = 'ҚУРОЛЛИ  КУЧЛАР  РЕЗЕРВИГА'
+table22.cell(4, 0).text = 'БЎШАТИЛСИН:'
+table22.columns[0].cells[5].merge(table22.columns[0].cells[
+                                      6]).text = '144-бандининг «в» кичик бандига мувофиқ (пенсия олиш ҳуқуқини берадиган хизмат муддатини ўтаганлиги)'
+table22.columns[2].cells[4].merge(table22.columns[2].cells[5]).text = '*** катта сержант ААА ААА ААА (А-);'
+table22.cell(6, 2).text = 'Асос:'
+resize_table(table22)
+
+blank = document.add_paragraph(' ')
+run_blank = blank.add_run()
+run_blank.add_break()
+
+
+table23 = document.add_table(rows=6, cols=3)
+table23.rows[0].cells[0].merge(table23.rows[0].cells[2]).text = '“Ўзбекистон Республикаси фуқаролари томонидан ҳарбий хизматни ўташ тартиби тўғрисида”ги Низомнинг 123-моддасига мувофиқ, ҳарбий хизматдаги узлуксиз хизмати учун бир йўла тўланадиган пул мукофоти'
+table23.cell(2, 0).text = 'ТЎЛАНСИН:'
+table23.cell(2, 2).text = 'ҚОРОВУЛ  ҚЎШИНЛАРИ  БОШ  БОШҚАРМАСИ  БЎЙИЧА:'
+table23.cell(4, 2).text = '*** генерал-майор ААА ААА АААга (С-) 2017 йилнинг 25 январь кунидан 2019 йилнинг 25 январь кунига қадар, узлуксиз ўтаган хизмат йиллари учун икки ойлик амал маоши миқдорида.'
+resize_table(table23)
+
+blank = document.add_paragraph(' ')
+run_blank = blank.add_run()
+run_blank.add_break()
+
+
+table24 = document.add_table(rows=8, cols=3)
+table24.rows[0].cells[0].merge(
+    table24.rows[0].cells[2]).text = '«Ички ишлар органларида хизматни ўташ тартиби тўғрисида»ги Низом талабларига мувофиқ'
+table24.rows[1].cells[0].merge(table24.rows[1].cells[2]).text = 'ИСТЕЪФОГА'
+table24.rows[2].cells[0].merge(table24.rows[2].cells[2]).text = ' '
+table24.cell(3, 0).text = 'БЎШАТИЛСИН:'
+table24.cell(3, 2).text = 'ИЧКИ ИШЛАР ВАЗИРЛИГИ МАРКАЗИЙ АППАРАТИ БЎЙИЧА:'
+table24.columns[0].cells[5].merge(table22.columns[0].cells[
+                                      6]).text = '144-бандининг «д» кичик бандига мувофиқ (касаллиги туфайли)'
+table24.cell(5, 2).text = 'Вазирлик ихтиёридаги полковник ААА ААА ААА (П-).'
+table24.cell(6, 2).text = 'Асос:'
+
+resize_table(table24)
+
+blank = document.add_paragraph(' ')
+run_blank = blank.add_run()
+run_blank.add_break()
+
+
+table25 = document.add_table(rows=2, cols=2)
+table25.cell(0, 0).text = 'ҚАЙТА ТИКЛАНСИН:'
+table25.cell(0, 1).text = 'АНДИЖОН  ВИЛОЯТИ  ИИБ  БЎЙИЧА: \n*** катта лейтенант ААА ААА АААнинг Ўзбекистон Республикаси Ички ишлар вазирининг 000 йил 00 ноябрдаги шахсий таркиб бўйича 000-сонли буйруғи билан бир поғона пасайтирилган «капитан» махсус унвони'
+table25.cell(1, 1).text = 'Асос:'
+
+blank = document.add_paragraph(' ')
+run_blank = blank.add_run()
+run_blank.add_break()
+
+table26 = document.add_table(rows=5, cols=3)
+table26.cell(0, 0).text = 'ЮБОРИЛСИН:'
+table26.cell(0, 2).text = 'БУХОРО ВИЛОЯТИ ИЧКИ ИШЛАР БОШҚАРМАСИ БЎЙИЧА:'
+table26.cell(2, 2).text = 'майор ААА ААА ААА (А-0), 2019 йилнинг 1 март кунидан *** лавозимидан озод этилиб, келгуси хизмат фаолиятини давом эттириши учун Ўзбекистон Республикаси Миллий гвардияси қўмондони ихтиёрига;'
+table26.cell(4, 2).text = 'Асос:'
+
+resize_table(table26)
+
+blank = document.add_paragraph(' ')
+run_blank = blank.add_run()
+run_blank.add_break()
+
+
+table27 = document.add_table(rows=7, cols=3)
+table27.rows[0].cells[0].merge(table27.rows[0].cells[2]).text = '*****'
+table27.cell(2, 0).text = 'ЎРНАТИЛСИН:'
+table27.cell(2, 2).text = 'ИЧКИ ИШЛАР ВАЗИРЛИГИ МАРКАЗИЙ АППАРАТИ БЎЙИЧА:'
+table27.cell(4, 2).text = '*** тезкор вакили подполковник ААА ААА ААнинг (А-), ойлик лавозим маошига 10 (ўн) фоиз миқдорида шахсий устама ҳақ;'
+table27.cell(6, 2).text = 'Асос:'
+resize_table(table27)
+
+blank = document.add_paragraph(' ')
+run_blank = blank.add_run()
+run_blank.add_break()
+
+
+table28 = document.add_table(rows=5, cols=3)
+table28.cell(0, 0).text = 'ЎЧИРИЛСИН:'
+table28.cell(0, 2).text = 'ҚОРАҚАЛПОҒИСТОН РЕСПУБЛИКАСИ ИИВ БЎЙИЧА:'
+table28.cell(2, 2).text = '**** подполковник ААА ААА ААА (А-), вафот этганлиги сабабли 2019 йил 02 апрель кунидан шахсий таркиб рўйхатидан.\nУнинг ўлими хизмат мажбуриятларини бажариш билан боғлиқ деб ҳисоблансин.'
+table28.cell(4, 2).text = 'Асос:'
+resize_table(table28)
+
+
+blank = document.add_paragraph(' ')
+run_blank = blank.add_run()
+run_blank.add_break()
+
+
+table29 = document.add_table(rows=9, cols=3)
+table29.rows[0].cells[0].merge(
+    table29.rows[0].cells[2]).text = '«Ички ишлар органларида хизматни ўташ тартиби тўғрисида»ги Низом талабларига мувофиқ'
+table29.rows[1].cells[0].merge(table29.rows[1].cells[2]).text = ' '
+table29.rows[2].cells[0].merge(table29.rows[2].cells[2]).text = 'ҚУРОЛЛИ КУЧЛАР ЗАХИРАСИГА'
+table29.cell(4, 0).text = 'БЎШАТИЛСИН:'
+table29.cell(4, 2).text = 'ТОШКЕНТ ШАҲАР ИЧКИ ИШЛАР БОШ БОШҚАРМАСИ БЎЙИЧА:'
+table29.cell(6, 0).text = '144-бандининг «н» кичик бандига мувофиқ (бошқа турдаги давлат хизматига ўтганлиги, кадрларнинг амалдаги захирасига киритмасдан)'
+table29.cell(6, 2).text = '**** подполковник АА АА АА (А-), 2019 йилнинг 12 апрель кунидан.\nЎзбекистон Республикаси Президентининг 2017 йил 05 майдаги ПФ-5037-сон Фармони асосида унинг Тадбиркорлик субъектларининг ҳуқуқлари ва қонуний манфаатларини ҳимоя қилиш бўйича вакил девонидаги иш вақти навбатдаги махсус унвон муддатига қўшилиши ҳамда уни белгиланган тартибда олиш кафолати сақланиб қолинсин.'
+table29.cell(8, 2).text = 'Асос:'
+resize_table(table29)
+
+
+blank = document.add_paragraph(' ')
+run_blank = blank.add_run()
+run_blank.add_break()
 document.save('namuna.docx')
