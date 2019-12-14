@@ -320,7 +320,7 @@ run_blank = blank.add_run()
 run_blank.add_break()
 
 table20 = document.add_table(rows=4, cols=3)
-table20.rows[0].cells[0].merge(table19.rows[0].cells[2]).text = 'ИСТЕЪФОГА'
+table20.rows[0].cells[0].merge(table20.rows[0].cells[2]).text = 'ИСТЕЪФОГА'
 table20.cell(2, 0).text = '144-бандининг «д» кичик бандига мувофиқ \n(касаллиги туфайли)'
 table20.cell(2, 2).text = '****** бошлиғи полковник ААА ААА ААА (П-).'
 table20.cell(3, 2).text = 'Асос:'
@@ -380,7 +380,7 @@ table24.rows[1].cells[0].merge(table24.rows[1].cells[2]).text = 'ИСТЕЪФО�
 table24.rows[2].cells[0].merge(table24.rows[2].cells[2]).text = ' '
 table24.cell(3, 0).text = 'БЎШАТИЛСИН:'
 table24.cell(3, 2).text = 'ИЧКИ ИШЛАР ВАЗИРЛИГИ МАРКАЗИЙ АППАРАТИ БЎЙИЧА:'
-table24.columns[0].cells[5].merge(table22.columns[0].cells[
+table24.columns[0].cells[5].merge(table24.columns[0].cells[
                                       6]).text = '144-бандининг «д» кичик бандига мувофиқ (касаллиги туфайли)'
 table24.cell(5, 2).text = 'Вазирлик ихтиёридаги полковник ААА ААА ААА (П-).'
 table24.cell(6, 2).text = 'Асос:'
