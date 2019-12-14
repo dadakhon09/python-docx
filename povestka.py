@@ -2,7 +2,7 @@ from docx import Document
 from docx.shared import Cm, Inches, Pt
 from docx.oxml.ns import nsdecls
 from docx.oxml import parse_xml
-# from docx.enum.text import WD_ALIGN_PARAGRAPH
+from docx.enum.table import WD_CELL_VERTICAL_ALIGNMENT
 
 document = Document()
 
@@ -11,6 +11,12 @@ def set_column_width(column, width):
     column.width = width
     for cell in column.cells:
         cell.width = width
+
+
+def set_row_height(row, height):
+    row.height = height
+    for cell in row.cells:
+        cell.height = height
 
 
 def make_rows_bold(*rows):
@@ -39,9 +45,8 @@ def center(*rows):
 
 
 def make_grey(table, *rows):
-    print(rows)
-    for row in len(rows):
-        table.rows[row].cells[0]._tc.get_or_add_tcPr().append(parse_xml(r'<w:shd {} w:fill="808080"/>'.format(nsdecls('w'))))
+    for row in rows:
+        table.rows[row._index].cells[0]._tc.get_or_add_tcPr().append(parse_xml(r'<w:shd {} w:fill="808080"/>'.format(nsdecls('w'))))
 
 
 p = document.add_paragraph('Ўзбекистон Республикаси Ички ишлар вазирининг шахсий таркиб бўйича буйруғи\nЛ О Й И Ҳ А С И')
@@ -90,6 +95,14 @@ set_column_width(table.columns[2], Cm(3.0))
 set_column_width(table.columns[3], Cm(9.9))
 set_column_width(table.columns[4], Cm(9.9))
 
+set_row_height(table.rows[0], Cm(0))
+set_row_height(table.rows[1], Cm(0))
+set_row_height(table.rows[2], Cm(0))
+set_row_height(table.rows[4], Cm(0))
+set_row_height(table.rows[7], Cm(0))
+set_row_height(table.rows[8], Cm(0))
+
+
 sections = document.sections
 for section in sections:
     section.top_margin = Cm(1.0)
@@ -106,6 +119,12 @@ for i in range(0, 10):
 
 center(hdr_cells, table.rows[1], table.rows[2], table.rows[4], table.rows[7], table.rows[8])
 make_grey(table, table.rows[1], table.rows[2], table.rows[4], table.rows[7], table.rows[8])
+
+table.rows[1].cells[0].vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
+table.rows[2].cells[0].vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
+table.rows[4].cells[0].vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
+table.rows[7].cells[0].vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
+table.rows[8].cells[0].vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
 
 
 document.save('povestka.docx')
