@@ -13,7 +13,16 @@ def set_column_width(column, width):
         
 def resize_table(table):
     set_column_width(table.columns[1], Cm(0.5))
-    set_column_width(table.columns[2], Cm(10))
+    set_column_width(table.columns[2], Cm(13))
+
+
+def make_rows_bold(*rows):
+    for row in rows:
+        for cell in row.cells:
+            for paragraph in cell.paragraphs:
+                for run in paragraph.runs:
+                    run.font.bold = True
+
 
 
 p = document.add_paragraph()
@@ -68,7 +77,7 @@ table2.cell(7, 0).text = '_____-сон'
 
 
 set_column_width(table2.columns[0], Cm(5))
-set_column_width(table2.columns[1], Cm(10))
+set_column_width(table2.columns[1], Cm(13))
 
 blank = document.add_paragraph(' ')
 run_blank = blank.add_run()
@@ -148,8 +157,8 @@ table5.cell(11, 1).text = '1 нусха'
 table5.cell(15, 1).text = 'нусха'
 
 
-set_column_width(table5.columns[0], Cm(8))
-set_column_width(table5.columns[1], Cm(8))
+set_column_width(table5.columns[0], Cm(10))
+set_column_width(table5.columns[1], Cm(10))
 
 blank = document.add_paragraph(' ')
 run_blank = blank.add_run()
@@ -181,5 +190,8 @@ for section in sections:
     section.right_margin = Cm(1.5)
 
 
+make_rows_bold(table1.rows[0], table1.rows[4], table1.rows[10], table1.rows[12], table1.rows[13], table1.rows[15], table2.rows[1], table2.rows[2], table5.rows[15])
+
+
+
 document.save('loyiha.docx')
-	
