@@ -1,5 +1,5 @@
 from docx import Document
-from docx.shared import Inches, Cm, RGBColor
+from docx.shared import Inches, Cm, RGBColor, Pt
 
 document = Document()
 
@@ -21,6 +21,16 @@ def set_column_width(column, width):
     column.width = width
     for cell in column.cells:
         cell.width = width
+
+
+def change_font_style(*tables):
+    for table in tables:
+        for row in table.rows:
+            for cell in row.cells:
+                for paragraph in cell.paragraphs:
+                    for run in paragraph.runs:
+                        run.font.name = 'Times New Roman'
+                        run.font.size = Pt(11)
 
 
 table1 = document.add_table(rows=7, cols=3)
@@ -452,6 +462,11 @@ table29.cell(6, 2).text = '**** подполковник АА АА АА (А-), 2
 table29.cell(8, 2).text = 'Асос:'
 resize_table(table29)
 
+tables = [table1, table2, table3, table4, table5, table6, table7, table8, table9, table10, table11, table12, table13, table14, table15, table16, table17, table18, table19, table20, table21, table22, table23, table24, table25, table26, table27, table28, table29]
+for i in range(0, 29):
+    change_font_style(tables[i])
+
+make_rows_bold(table1.rows[0], table2.rows[0], table3.rows[3], table3.rows[0], table3.rows[4], table4.rows[0], table5.rows[2], table6.rows[2], table6.rows[4], table6.rows[2], table7.rows[2], table7.rows[4], table7.rows[8], table7.rows[12], table8.rows[0], table8.rows[4], table8.rows[8], table9.rows[2])
 
 blank = document.add_paragraph(' ')
 run_blank = blank.add_run()
