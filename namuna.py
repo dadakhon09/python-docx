@@ -466,7 +466,7 @@ tables = [table1, table2, table3, table4, table5, table6, table7, table8, table9
 for i in range(0, 29):
     change_font_style(tables[i])
 
-make_rows_bold(table1.rows[0], table2.rows[0], table3.rows[3], table3.rows[0], table3.rows[4], table4.rows[0], table5.rows[2], table6.rows[2], table6.rows[4], table6.rows[2], table7.rows[2], table7.rows[4], table7.rows[8], table7.rows[12], table8.rows[0], table8.rows[4], table8.rows[8], table9.rows[2])
+make_rows_bold(table1.rows[0], table2.rows[0], table3.rows[3], table3.rows[0], table3.rows[4], table4.rows[0], table5.rows[2], table6.rows[2], table6.rows[4], table6.rows[2], table7.rows[2], table7.rows[4], table7.rows[8], table7.rows[12], table8.rows[0], table8.rows[4], table8.rows[8], table9.rows[2], table10.rows[0], table10.rows[2], table10.rows[3], table10.rows[5], table11.rows[0], table11.rows[2], table12.rows[0], table12.rows[4], table12.rows[8], table13.rows[2], table14.rows[2], table15.rows[2], table16.rows[0], table16.rows[2])
 
 blank = document.add_paragraph(' ')
 run_blank = blank.add_run()
