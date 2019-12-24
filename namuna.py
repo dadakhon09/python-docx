@@ -6,7 +6,7 @@ document = Document()
 
 def resize_table(table):
     set_column_width(table.columns[1], Cm(0.5))
-    set_column_width(table.columns[2], Cm(10))
+    set_column_width(table.columns[2], Cm(14))
 
 
 def make_rows_bold(*rows):
@@ -287,10 +287,11 @@ blank = document.add_paragraph(' ')
 run_blank = blank.add_run()
 run_blank.add_break()
 
-table17 = document.add_table(rows=2, cols=2)
+table17 = document.add_table(rows=3, cols=2)
 table17.cell(0, 0).text = 'ПАСАЙТИРИЛСИН:'
-table17.cell(0, 1).text = 'ЖИЗЗАХ  ВИЛОЯТИ  ИИБ  БЎЙИЧА: \n**** капитан ААА ААА ААА (А-)махсус унвони бир поғона «катта лейтенант»гача.'
-table17.cell(1, 1).text = 'Асос:'
+table17.cell(0, 1).text = 'ЖИЗЗАХ  ВИЛОЯТИ  ИИБ  БЎЙИЧА:'
+table17.cell(1, 1).text = '**** капитан ААА ААА ААА (А-)махсус унвони бир поғона «катта лейтенант»гача.'
+table17.cell(2, 1).text = 'Асос:'
 
 blank = document.add_paragraph(' ')
 run_blank = blank.add_run()
@@ -402,10 +403,11 @@ run_blank = blank.add_run()
 run_blank.add_break()
 
 
-table25 = document.add_table(rows=2, cols=2)
+table25 = document.add_table(rows=3, cols=2)
 table25.cell(0, 0).text = 'ҚАЙТА ТИКЛАНСИН:'
-table25.cell(0, 1).text = 'АНДИЖОН  ВИЛОЯТИ  ИИБ  БЎЙИЧА: \n*** катта лейтенант ААА ААА АААнинг Ўзбекистон Республикаси Ички ишлар вазирининг 000 йил 00 ноябрдаги шахсий таркиб бўйича 000-сонли буйруғи билан бир поғона пасайтирилган «капитан» махсус унвони'
-table25.cell(1, 1).text = 'Асос:'
+table25.cell(0, 1).text = 'АНДИЖОН  ВИЛОЯТИ  ИИБ  БЎЙИЧА: '
+table25.cell(1, 1).text = '*** катта лейтенант ААА ААА АААнинг Ўзбекистон Республикаси Ички ишлар вазирининг 000 йил 00 ноябрдаги шахсий таркиб бўйича 000-сонли буйруғи билан бир поғона пасайтирилган «капитан» махсус унвони'
+table25.cell(2, 1).text = 'Асос:'
 
 blank = document.add_paragraph(' ')
 run_blank = blank.add_run()
@@ -466,9 +468,17 @@ tables = [table1, table2, table3, table4, table5, table6, table7, table8, table9
 for i in range(0, 29):
     change_font_style(tables[i])
 
-make_rows_bold(table1.rows[0], table2.rows[0], table3.rows[3], table3.rows[0], table3.rows[4], table4.rows[0], table5.rows[2], table6.rows[2], table6.rows[4], table6.rows[2], table7.rows[2], table7.rows[4], table7.rows[8], table7.rows[12], table8.rows[0], table8.rows[4], table8.rows[8], table9.rows[2], table10.rows[0], table10.rows[2], table10.rows[3], table10.rows[5], table11.rows[0], table11.rows[2], table12.rows[0], table12.rows[4], table12.rows[8], table13.rows[2], table14.rows[2], table15.rows[2], table16.rows[0], table16.rows[2])
+make_rows_bold(table1.rows[0], table2.rows[0], table3.rows[3], table3.rows[0], table3.rows[4], table4.rows[0], table5.rows[2], table6.rows[2], table6.rows[4], table6.rows[2], table7.rows[2], table7.rows[4], table7.rows[8], table7.rows[12], table8.rows[0], table8.rows[4], table8.rows[8], table9.rows[2], table10.rows[0], table10.rows[2], table10.rows[3], table10.rows[5], table11.rows[0], table11.rows[2], table12.rows[0], table12.rows[4], table12.rows[8], table13.rows[2], table14.rows[2], table15.rows[2], table16.rows[0], table16.rows[2], table17.rows[0], table17.rows[2], table18.rows[1], table19.rows[0], table19.rows[2], table19.rows[4], table19.rows[8], table20.rows[0], table20.rows[3], table21.rows[2], table21.rows[6], table22.rows[0], table22.rows[2], table23.rows[0], table23.rows[2], table24.rows[0], table24.rows[1], table24.rows[3], table25.rows[0], table25.rows[2], table26.rows[0], table26.rows[4], table27.rows[0], table27.rows[2], table27.rows[6], table28.rows[0], table28.rows[4], table29.rows[0], table29.rows[2], table29.rows[8])
 
 blank = document.add_paragraph(' ')
 run_blank = blank.add_run()
 run_blank.add_break()
+
+sections = document.sections
+for section in sections:
+    section.top_margin = Cm(1.3)
+    section.bottom_margin = Cm(1.3)
+    section.left_margin = Cm(1.3)
+    section.right_margin = Cm(1.3)
+
 document.save('namuna.docx')
