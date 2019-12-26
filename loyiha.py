@@ -1,5 +1,6 @@
 from docx import Document
 from docx.shared import Cm, Inches, Pt
+from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
 
 document = Document()
 
@@ -82,8 +83,8 @@ table2.cell(5, 0).text = 'Тошкент шаҳри,'
 table2.cell(6, 0).text = '2019  йил «_____» январь'
 table2.cell(7, 0).text = '_____-сон'
 
-set_column_width(table2.columns[0], Cm(5))
-set_column_width(table2.columns[1], Cm(13))
+set_column_width(table2.columns[0], Cm(5.1))
+set_column_width(table2.columns[1], Cm(13.5))
 
 blank = document.add_paragraph(' ')
 run_blank = blank.add_run()
@@ -93,8 +94,8 @@ table3 = document.add_table(1, 2)
 table3.cell(0, 0).text = '****\nполковник'
 table3.cell(0, 1).text = 'А.А.ААААА'
 
-set_column_width(table3.columns[0], Cm(11))
-set_column_width(table3.columns[1], Cm(4))
+set_column_width(table3.columns[0], Cm(14.1))
+set_column_width(table3.columns[1], Cm(4.5))
 
 blank = document.add_paragraph(' ')
 run_blank = blank.add_run()
@@ -115,8 +116,8 @@ table4.cell(2, 1).text = 'А.А.ААААА'
 table4.cell(3, 0).text = '*****\nподполковник'
 table4.cell(3, 1).text = 'А.А.ААААА'
 
-set_column_width(table3.columns[0], Cm(11))
-set_column_width(table3.columns[1], Cm(4))
+set_column_width(table4.columns[0], Cm(14.1))
+set_column_width(table4.columns[1], Cm(4.5))
 
 blank = document.add_paragraph(' ')
 run_blank = blank.add_run()
@@ -142,7 +143,8 @@ table5.cell(10, 0).text = 'Тошкент шаҳар ИИББ '
 table5.cell(11, 0).text = 'Фарғона вилояти ИИБ '
 table5.cell(15, 0).text = 'Ж  А  М  И '
 
-table5.cell(0, 1).text = '1 нусха'
+p = table5.rows[0].cells[1].add_paragraph('1 нусха')
+p.alignment = WD_PARAGRAPH_ALIGNMENT.RIGHT
 table5.cell(1, 1).text = '1 нусха'
 table5.cell(2, 1).text = '1 нусха'
 table5.cell(3, 1).text = '1 нусха'
@@ -156,8 +158,8 @@ table5.cell(10, 1).text = '1 нусха'
 table5.cell(11, 1).text = '1 нусха'
 table5.cell(15, 1).text = 'нусха'
 
-set_column_width(table5.columns[0], Cm(10))
-set_column_width(table5.columns[1], Cm(10))
+set_column_width(table5.columns[0], Cm(9.3))
+set_column_width(table5.columns[1], Cm(9.3))
 
 blank = document.add_paragraph(' ')
 run_blank = blank.add_run()
