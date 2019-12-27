@@ -66,8 +66,9 @@ hdr_cells.cells[4].text = 'Таклиф қилинаётган лавозим'
 table.rows[1].cells[0].merge(table.rows[1].cells[4]).text = 'ТАЙИНЛАНМОҚДА'
 table.rows[2].cells[0].merge(table.rows[2].cells[4]).text = 'ВАЗИРЛИК  МАРКАЗИЙ  АППАРАТИ '
 table.cell(3, 0).text = '1'
-p1 = table.rows[3].cells[1].add_paragraph('майор\nААААА\nААААА\nААААА')
-run = p1.runs[0]
+p1 = table.rows[3].cells[1].paragraphs[0]
+run = p1.add_run()
+run.add_text('майор\nААААА\nААААА\nААААА')
 run.font.bold = True
 table.rows[3].cells[1].add_paragraph('1974 йилда Тошкент шаҳрида туғилган, ўзбек')
 table.cell(3, 2).paragraphs[0].add_run().add_picture('/home/dadakhon/Pictures/picture.png', Inches(1.0))
@@ -75,16 +76,18 @@ table.cell(3, 3).text = '**** ҳозирги ишлаб турган лавоз�
 table.cell(3, 4).text = 'Келгусида хизмат олиб бораётган лавозим\n\n\n\n\nМуқаддам ушбу лавозимда: ААА ААА ААА'
 table.rows[4].cells[0].merge(table.rows[4].cells[4]).text = 'ҚОРАҚАЛПОҒИСТОН РЕСПУБЛИКАСИ ИИВ '
 table.cell(5, 0).text = '2'
-p1 = table.rows[5].cells[1].add_paragraph('подполковник\nААААА\nААААА\nААААА')
-run = p1.runs[0]
+p1 = table.rows[5].cells[1].paragraphs[0]
+run = p1.add_run()
+run.add_text('подполковник\nААААА\nААААА\nААААА')
 run.font.bold = True
 table.rows[5].cells[1].add_paragraph('\n1982 йилда Фарғона вилояти, Марғилон шаҳрида туғилган, ўзбек')
 table.cell(5, 2).paragraphs[0].add_run().add_picture('/home/dadakhon/Pictures/picture.png', Inches(1.0))
 table.cell(5, 3).text = '**** ҳозирги ишлаб турган лавозим'
 table.cell(5, 4).text = 'Келгусида хизмат олиб бораётган лавозим\n\n\n\nМуқаддам ушбу лавозимда: ААА ААА ААА'
 table.cell(6, 0).text = '3'
-p1 = table.rows[6].cells[1].add_paragraph('майор\nААААА\nААААА\nААААА')
-run = p1.runs[0]
+p1 = table.rows[6].cells[1].paragraphs[0]
+run = p1.add_run()
+run.add_text('майор\nААААА\nААААА\nААААА')
 run.font.bold = True
 table.rows[6].cells[1].add_paragraph('\n1985 йилда Тошкент шаҳрида туғилган, ўзбек')
 table.cell(6, 2).paragraphs[0].add_run().add_picture('/home/dadakhon/Pictures/picture.png', Inches(1.0))
@@ -93,8 +96,9 @@ table.cell(6, 4).text = 'Келгусида хизмат олиб бораётг
 table.rows[7].cells[0].merge(table.rows[7].cells[4]).text = 'ҚОЛДИРИЛМОҚДА '
 table.rows[8].cells[0].merge(table.rows[8].cells[4]).text = 'ВАЗИРЛИК  МАРКАЗИЙ  АППАРАТИ '
 table.cell(9, 0).text = '4'
-p1 = table.rows[9].cells[1].add_paragraph('майор\nААА\nААА\nААА')
-run = p1.runs[0]
+p1 = table.rows[9].cells[1].paragraphs[0]
+run = p1.add_run()
+run.add_text('майор\nААА\nААА\nААА')
 run.font.bold = True
 table.rows[9].cells[1].add_paragraph('\n1986 йилда Тошкент вилояти, Зангиота туманида туғилган, ўзбек')
 table.cell(9, 2).paragraphs[0].add_run().add_picture('/home/dadakhon/Pictures/picture.png', Inches(1.0))
