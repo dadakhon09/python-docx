@@ -1,9 +1,8 @@
 from docx import Document
-from docx.shared import Cm, Inches, Pt
+from docx.shared import Cm, Inches, Pt, RGBColor
 from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
 
 document = Document()
-
 
 def set_column_width(column, width):
     column.width = width
@@ -51,7 +50,6 @@ p.alignment = 1
 run.font.bold = True
 run.font.name = 'Times New Roman'
 
-
 table1 = document.add_table(rows=17, cols=3)
 table1.cell(0, 0).text = 'ТАЙИНЛАНСИН:'
 table1.cell(0, 2).text = 'ИЧКИ ИШЛАР ВАЗИРЛИГИ МАРКАЗИЙ АППАРАТИ БЎЙИЧА:'
@@ -64,12 +62,24 @@ table1.rows[10].cells[0].merge(table1.rows[10].cells[
                                    2]).text = ' «Ички ишлар органларида хизматни ўташ тартиби тўғрисида»ги Низом талабларига мувофиқ '
 table1.cell(12, 2).text = 'ҚУРОЛЛИ КУЧЛАР ЗАХИРАСИГА'
 table1.cell(13, 0).text = 'БЎШАТИЛСИН:'
-table1.cell(14,
-            0).text = '144-бандининг «к» кичик бандига мувофиқ (ички ишлар органи ходимининг шаънига путур етказувчи хатти-ҳаракатлар содир этганлиги учун) топширган'
-table1.cell(14, 2).text = '**** бошлиғи (Самарқанд шаҳри) подполковник ААА АААА АААА (А-).'
+p = table1.rows[14].cells[0].paragraphs[0]
+run = p.add_run()
+run.add_text('144-бандининг «к» кичик бандига мувофиқ (ички ишлар органи ходимининг шаънига путур етказувчи хатти-ҳаракатлар содир этганлиги учун)')
+run.font.bold = True
+run.font.color.rgb = RGBColor(0xff, 0x00, 0x00)
+p1 = table1.rows[14].cells[0].add_paragraph()
+run1 = p1.add_run()
+run1.add_text('топширган')
+run1.font.bold = True
+r = table1.rows[14].cells[2].paragraphs[0].add_run()
+r.add_text('**** бошлиғи (Самарқанд шаҳри) подполковник ААА АААА АААА (А-).')
+r.font.color.rgb = RGBColor(0xff, 0x00, 0x00)
 table1.cell(15, 2).text = 'Асос:'
 
 resize_table(table1)
+
+
+table1.rows[12].cells[2].paragraphs[0].alignment = 1
 
 blank = document.add_paragraph(' ')
 run_blank = blank.add_run()
@@ -82,6 +92,14 @@ table2.cell(2, 1).text = 'П.Р. Бобожонов'
 table2.cell(5, 0).text = 'Тошкент шаҳри,'
 table2.cell(6, 0).text = '2019  йил «_____» январь'
 table2.cell(7, 0).text = '_____-сон'
+
+table2.rows[1].cells[0].paragraphs[0].alignment = 1
+table2.rows[2].cells[0].paragraphs[0].alignment = 1
+table2.rows[5].cells[0].paragraphs[0].alignment = 1
+table2.rows[6].cells[0].paragraphs[0].alignment = 1
+table2.rows[7].cells[0].paragraphs[0].alignment = 1
+table2.rows[2].cells[1].paragraphs[0].alignment = 2
+
 
 set_column_width(table2.columns[0], Cm(5.1))
 set_column_width(table2.columns[1], Cm(13.5))
@@ -143,20 +161,16 @@ table5.cell(10, 0).text = 'Тошкент шаҳар ИИББ '
 table5.cell(11, 0).text = 'Фарғона вилояти ИИБ '
 table5.cell(15, 0).text = 'Ж  А  М  И '
 
-p = table5.rows[0].cells[1].add_paragraph('1 нусха')
-p.alignment = WD_PARAGRAPH_ALIGNMENT.RIGHT
-table5.cell(1, 1).text = '1 нусха'
-table5.cell(2, 1).text = '1 нусха'
-table5.cell(3, 1).text = '1 нусха'
-table5.cell(4, 1).text = '1 нусха'
-table5.cell(5, 1).text = '1 нусха'
-table5.cell(6, 1).text = '1 нусха'
-table5.cell(7, 1).text = '1 нусха'
-table5.cell(8, 1).text = '1 нусха'
-table5.cell(9, 1).text = '1 нусха'
-table5.cell(10, 1).text = '1 нусха'
-table5.cell(11, 1).text = '1 нусха'
-table5.cell(15, 1).text = 'нусха'
+table5.rows[0].cells[1].paragraphs[0].add_run('1 нусха'), table5.rows[1].cells[1].paragraphs[0].add_run('1 нусха'),
+table5.rows[2].cells[1].paragraphs[0].add_run('1 нусха'), table5.rows[3].cells[1].paragraphs[0].add_run('1 нусха'),
+table5.rows[4].cells[1].paragraphs[0].add_run('1 нусха'), table5.rows[5].cells[1].paragraphs[0].add_run('1 нусха'),
+table5.rows[6].cells[1].paragraphs[0].add_run('1 нусха'), table5.rows[7].cells[1].paragraphs[0].add_run('1 нусха'),
+table5.rows[8].cells[1].paragraphs[0].add_run('1 нусха'), table5.rows[9].cells[1].paragraphs[0].add_run('1 нусха'),
+table5.rows[10].cells[1].paragraphs[0].add_run('1 нусха'), table5.rows[11].cells[1].paragraphs[0].add_run('1 нусха'),
+table5.rows[15].cells[1].paragraphs[0].add_run(' нусха')
+
+for i in range(16):
+    table5.rows[i].cells[1].paragraphs[0].alignment = 2
 
 set_column_width(table5.columns[0], Cm(9.3))
 set_column_width(table5.columns[1], Cm(9.3))
@@ -165,11 +179,11 @@ blank = document.add_paragraph(' ')
 run_blank = blank.add_run()
 run_blank.add_break()
 
-p = document.add_paragraph('*****\nмайор')
+p = document.add_paragraph('*****\nмайор                                          '
+                           '                                                       '
+                           '                    А.А.ААААА')
 p.alignment = 0
 
-p = document.add_paragraph('А.А.ААААА')
-p.alignment = 2
 
 for i in range(0, 8):
     blank = document.add_paragraph(' ')
