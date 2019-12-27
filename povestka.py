@@ -1,5 +1,5 @@
 from docx import Document
-from docx.shared import Cm, Inches, Pt
+from docx.shared import Cm, Inches, Pt, Mm
 from docx.oxml.ns import nsdecls
 from docx.oxml import parse_xml
 from docx.enum.table import WD_CELL_VERTICAL_ALIGNMENT
@@ -110,9 +110,9 @@ set_column_width(table.columns[2], Cm(3.0))
 set_column_width(table.columns[3], Cm(9.9))
 set_column_width(table.columns[4], Cm(9.9))
 
-set_row_height(table.rows[0], Cm(0))
-set_row_height(table.rows[1], Cm(0))
-set_row_height(table.rows[2], Cm(0))
+set_row_height(table.rows[0], Mm(0.1))
+set_row_height(table.rows[1], Mm(0))
+set_row_height(table.rows[2], Mm(0))
 set_row_height(table.rows[4], Cm(0))
 set_row_height(table.rows[7], Cm(0))
 set_row_height(table.rows[8], Cm(0))
